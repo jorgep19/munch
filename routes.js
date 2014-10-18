@@ -36,12 +36,12 @@ module.exports = function(app) {
 					res.send('Already exists ' + foundUsers[0].email);
 				} else {
 					// create restaurant 
-					var newUser = new Restaurant(userData);
+					var newUser = new User(userData);
 					newUser.save(function(err, savedUser){
 						if(err){
 							res.send('Oh fuck...' + err);
 						}
-						res.send(newResaurant.name + ' added to the database');
+						res.send(savedUser.email + ' added to the database');
 					});
 				}
 			});

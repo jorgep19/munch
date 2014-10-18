@@ -8,14 +8,24 @@ function MainCtrl(MainService) {
 	})
 
 	ctrl.addRestaurant = function() {
-		
+		var restName = document.getElementById('restSuggestionBox_value').value;
+		MainService.postRestaurant({name: restName}, function(data, status){
+			MainService.getRestaurants(function(restaurantsData) {
+				ctrl.restaurants = restaurantsData;
+			});
+
+			console.log(data);
+			console.log(status);
+		});
 	};
 
 	ctrl.addUser = function() {
-
+		MainService.postUser({ email: ctrl.newUser}, function(data, status){
+			console.log(data);
+			console.log(status);
+		});	
 	};
-	
-	ctrl.newRestaurant = '';
+
 	ctrl.newUser = '';
 }
 

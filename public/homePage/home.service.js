@@ -10,15 +10,26 @@ function MainService($http) {
 		});
 	};
 
-	this.addRestaurant = function() {
-
+	this.postRestaurant = function(restData, callback) {
+		$http.post('/api/put/restaurant/', restData).
+		success(function(data, status, headers, config) {
+			callback(data, status);
+		}).
+		error(function(data, status, headers, config) {
+			callback(data, status);
+		});
 	};
 
-	this.addUser = function() {
-
+	this.postUser = function(userData, callback) {
+		$http.post('/api/put/user/', userData).
+		success(function(data, status, headers, config) {
+			callback(data, status);
+		}).
+		error(function(data, status, headers, config) {
+			callback(data, status);
+		});
 	};
 }
-
 
 angular.module('munch')
 .service('MainService', ['$http', MainService]);
