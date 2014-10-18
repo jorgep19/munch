@@ -8,7 +8,7 @@ function MainCtrl(MainService) {
 	})
 
 	ctrl.addRestaurant = function() {
-
+		
 	};
 
 	ctrl.addUser = function() {
@@ -16,6 +16,7 @@ function MainCtrl(MainService) {
 	};
 	
 	ctrl.newRestaurant = '';
+	ctrl.newUser = '';
 }
 
 

@@ -8,7 +8,15 @@ function MainService($http) {
 		}).error(function(err){
 			console.log(err);
 		});
-	}
+	};
+
+	this.addRestaurant = function() {
+
+	};
+
+	this.addUser = function() {
+
+	};
 }
 
 
