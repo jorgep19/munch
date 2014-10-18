@@ -1,0 +1,29 @@
+.rest-search-button {
+    margin-right: 5%;
+}
+
+.rest-search-button:hover {
+	background-color: #97030C; 
+    color: #ffffff; 
+}
+
+.munch-header {
+	width: 100%;
+	text-align: right;
+}
+
+.munch-slang {
+	color: #777 !important;
+	font-size: 26px;
+}
+
+.investors-link {
+	color: #97030C;
+}
+
+.home-container {
+	width: 100%;
+	height: 100%;
+	background-image: url('/assets/bg.jpg'); 
+	background-size: 100% 100%;
+} 

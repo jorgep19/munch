@@ -10,11 +10,11 @@ angular.module('munch', ['ui.router', 'angucomplete'])
 		$stateProvider
 		.state('home', {
 		url: "/",
-		templateUrl: "partials/home.html"
+		templateUrl: "homePage/home.html"
 		})
 		.state('investors', {
 		url: "/investors",
-		templateUrl: "partials/investors.html"
+		templateUrl: "investorsPage/investors.html"
 		});
 
 }]);
