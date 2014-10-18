@@ -33,7 +33,9 @@ module.exports = function(app) {
 
 				// increase votes for restaurant	
 				if(foundUsers.length > 0) {				
-					res.send('Already exists ' + foundUsers[0].email);
+					res.send('Our records show that ' + 
+							 foundUsers[0].email +
+							 ' is already signedup but thank you for showing your interest again :).');
 				} else {
 					// create restaurant 
 					var newUser = new User(userData);
@@ -41,7 +43,7 @@ module.exports = function(app) {
 						if(err){
 							res.send('Oh fuck...' + err);
 						}
-						res.send(savedUser.email + ' added to the database');
+						res.send('You rock! Thank you for signing up. From Now on you will get updates about our restaurant catalag and our platform.');
 					});
 				}
 			});
@@ -86,7 +88,9 @@ module.exports = function(app) {
 						if(err){
 							res.send('Oh fuck...' + err);
 						}
-						res.send('Votes increased for ' + savedRestaurant.name);	
+						res.send('Thank you for suggesting ' + 
+								 savedRestaurant.name + 
+								 ' sign up to our newsletter and we\'ll let know any updates of our relationship with them');	
 					});
 				} else {
 					// create restaurant 
@@ -96,7 +100,10 @@ module.exports = function(app) {
 						if(err){
 							res.send('Oh fuck...' + err);
 						}
-						res.send(newResaurant.name + ' added to the database');
+						res.send('Thank you for suggesting ' + 
+								 savedRestaurant.name + 
+								 ' sign up to our newsletter and we\'ll let know any updates of our relationship with them');	
+					
 					});
 				}
 			});
