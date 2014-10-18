@@ -9,12 +9,12 @@ angular.module('munch', ['ui.router', 'angucomplete'])
 
 		$stateProvider
 		.state('home', {
-		url: "/",
-		templateUrl: "homePage/home.html"
+			url: "/",
+			templateUrl: "homePage/home.html"
 		})
 		.state('investors', {
-		url: "/investors",
-		templateUrl: "investorsPage/investors.html"
+			url: "/investors",
+			templateUrl: "investorsPage/investors.html"
 		});
 
 }]);
